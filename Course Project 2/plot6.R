@@ -25,9 +25,9 @@ filtered_cali_balti<-filtered_cali_balti %>% group_by(fips,year) %>%
 filtered_cali_balti$fips[1:4]<-"Los Angeles"
 filtered_cali_balti$fips[5:8]<-"Baltimore"
 
-par(mfrow=c(1,2))
 
 png(filename = "plot6.png",height = 480,width = 480)
+par(mfrow=c(1,2))
 
 barplot(filtered_cali_balti[1:4,]$mean_emission,names.arg=filtered_cali_balti[1:4,]$year
         ,main = "Los Angeles\n Emission rate \nfrom Motor Vehicle",col = "red",
